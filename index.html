@@ -137,15 +137,39 @@
     .project-media {
       margin-top: 18px;
     }
-    .project-img {
-      width: 100%;
-      max-height: 420px;
-      object-fit: cover;
+    .project-media-layout {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 12px;
+      align-items: stretch;
+    }
+    .project-thumb-large,
+    .project-thumb-small {
       border-radius: 20px;
+      overflow: hidden;
       border: 1px solid #f4c8d7;
-      display: block;
-      box-shadow: 0 12px 28px rgba(184, 143, 121, 0.16);
-      background: #fff1f7;
+      background: #fff4f8;
+      box-shadow: 0 10px 24px rgba(184, 143, 121, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .project-thumb-large {
+      min-height: 360px;
+    }
+    .project-thumb-small-column {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 12px;
+    }
+    .project-thumb-small {
+      min-height: 160px;
+    }
+    .project-thumb-large img,
+    .project-thumb-small img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
     .project-media-note {
       margin-top: 10px;
@@ -253,10 +277,12 @@
           <p>依頼された内容のイラスト作成</p>
           <p class="project-stack">使用ツール: Photoshop, Clip Studio Paint</p>
           <div class="project-media">
-            <div class="project-grid">
-              <div class="project-thumb"><img src="images/illustration-sample-1.svg" alt="Illustration sample 1" /></div>
-              <div class="project-thumb"><img src="images/illustration-sample-2.svg" alt="Illustration sample 2" /></div>
-              <div class="project-thumb"><img src="images/illustration-sample-3.svg" alt="Illustration sample 3" /></div>
+            <div class="project-media-layout">
+              <div class="project-thumb-large"><img src="images/illustration-sample-1.svg" alt="Illustration sample 1" /></div>
+              <div class="project-thumb-small-column">
+                <div class="project-thumb-small"><img src="images/illustration-sample-2.svg" alt="Illustration sample 2" /></div>
+                <div class="project-thumb-small"><img src="images/illustration-sample-3.svg" alt="Illustration sample 3" /></div>
+              </div>
             </div>
             <p class="project-media-note">画像を <code>images/illustration-sample-1.svg</code> 〜 <code>images/illustration-sample-3.svg</code> に差し替えてください。</p>
           </div>
@@ -267,10 +293,12 @@
             <p>Mayaを使用したモデリング</p>
             <p class="project-stack">使用ツール: Maya, Substance Painter</p>
             <div class="project-media">
-              <div class="project-grid">
-                <div class="project-thumb"><img src="images/cg-modeling-sample-1.svg" alt="CG Modeling sample 1" /></div>
-                <div class="project-thumb"><img src="images/cg-modeling-sample-2.svg" alt="CG Modeling sample 2" /></div>
-                <div class="project-thumb"><img src="images/cg-modeling-sample-3.svg" alt="CG Modeling sample 3" /></div>
+              <div class="project-media-layout">
+                <div class="project-thumb-large"><img src="images/cg-modeling-sample-1.svg" alt="CG Modeling sample 1" /></div>
+                <div class="project-thumb-small-column">
+                  <div class="project-thumb-small"><img src="images/cg-modeling-sample-2.svg" alt="CG Modeling sample 2" /></div>
+                  <div class="project-thumb-small"><img src="images/cg-modeling-sample-3.svg" alt="CG Modeling sample 3" /></div>
+                </div>
               </div>
               <p class="project-media-note">画像を <code>images/cg-modeling-sample-1.svg</code> 〜 <code>images/cg-modeling-sample-3.svg</code> に差し替えてください。</p>
             </div>
@@ -280,10 +308,12 @@
             <p>オリジナルキャラクターのデザイン</p>
             <p class="project-stack">使用ツール: Procreate</p>
             <div class="project-media">
-              <div class="project-grid">
-                <div class="project-thumb"><img src="images/character-design-sample-1.svg" alt="Character Design sample 1" /></div>
-                <div class="project-thumb"><img src="images/character-design-sample-2.svg" alt="Character Design sample 2" /></div>
-                <div class="project-thumb"><img src="images/character-design-sample-3.svg" alt="Character Design sample 3" /></div>
+              <div class="project-media-layout">
+                <div class="project-thumb-large"><img src="images/character-design-sample-1.svg" alt="Character Design sample 1" /></div>
+                <div class="project-thumb-small-column">
+                  <div class="project-thumb-small"><img src="images/character-design-sample-2.svg" alt="Character Design sample 2" /></div>
+                  <div class="project-thumb-small"><img src="images/character-design-sample-3.svg" alt="Character Design sample 3" /></div>
+                </div>
               </div>
               <p class="project-media-note">画像を <code>images/character-design-sample-1.svg</code> 〜 <code>images/character-design-sample-3.svg</code> に差し替えてください。</p>
             </div>
