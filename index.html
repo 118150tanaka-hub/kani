@@ -18,6 +18,24 @@
       margin: 0 auto;
       padding: 40px 20px;
     }
+    .header-title {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #0066cc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.4rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
     h1 {
       margin: 0;
       font-size: clamp(2.8rem, 4vw, 4rem);
@@ -77,6 +95,22 @@
       margin: 8px 0 0;
       color: #555;
     }
+    .project-media {
+      margin-top: 16px;
+    }
+    .project-img {
+      width: 100%;
+      max-height: 420px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid #e6e6eb;
+      display: block;
+    }
+    .project-media-note {
+      margin-top: 10px;
+      color: #666;
+      font-size: 0.95rem;
+    }
     .pdf-viewer {
       margin-top: 40px;
       padding: 24px;
@@ -126,58 +160,6 @@
       min-width: 120px;
       text-align: center;
     }
-    .gallery-section {
-      margin-top: 32px;
-    }
-    .gallery-category {
-      margin-bottom: 40px;
-    }
-    .gallery-category h4 {
-      margin: 24px 0 16px;
-      font-size: 1.1rem;
-      color: #0066cc;
-    }
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-    .gallery-item {
-      aspect-ratio: 1;
-      background: #ffffff;
-      border: 1px solid #e6e8eb;
-      border-radius: 8px;
-      padding: 12px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-    .gallery-item:hover {
-      border-color: #0066cc;
-      box-shadow: 0 2px 8px rgba(0, 102, 204, 0.1);
-    }
-    .gallery-item-image {
-      width: 100%;
-      height: 70%;
-      background: #f0f0f0;
-      border-radius: 4px;
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2.5rem;
-    }
-    .gallery-item-title {
-      margin: 0;
-      font-size: 0.85rem;
-      color: #333;
-      font-weight: 500;
-    }
     .toc-section {
       margin-top: 32px;
       padding: 20px;
@@ -206,7 +188,10 @@
 <body>
   <div class="container">
     <header>
-      <h1>みらのん</h1>
+      <div class="header-title">
+        <div class="brand-icon">M</div>
+        <h1>みらのん</h1>
+      </div>
       <h2>#3DCGデザイナー</h2>
       <p>わくわくするような作品をつくる</p>
     </header>
@@ -214,16 +199,6 @@
     <section class="section">
       <h3>About</h3>
       <p>イラスト・キャラクターデザイン・3DCGモデリングを手がけています。依頼に沿った制作からオリジナルキャラまで、見る人が楽しめる作品づくりを心がけています。</p>
-    </section>
-
-    <section class="section">
-      <h3>Contact</h3>
-      <ul class="link-list">
-        <li>Email: <a href="mailto:118150tanaka@gmail.com">118150tanaka@gmail.com</a></li>
-        <li>GitHub: <a href="https://github.com" target="_blank" rel="noopener noreferrer">https://github.com</a></li>
-        <li>X: <a href="https://x.com" target="_blank" rel="noopener noreferrer">https://x.com</a></li>
-        <li>LinkedIn: <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">https://www.linkedin.com</a></li>
-      </ul>
     </section>
 
     <section class="section">
@@ -243,6 +218,10 @@
         <h4 class="project-title">Illustration</h4>
         <p>依頼された内容のイラスト作成</p>
         <p class="project-stack">使用ツール: Photoshop, Clip Studio Paint</p>
+        <div class="project-media">
+          <img class="project-img" src="images/illustration-sample.jpg" alt="Illustration sample" />
+          <p class="project-media-note">ここに作品イメージを表示できます。画像ファイルを <code>images/illustration-sample.jpg</code> に追加してください。</p>
+        </div>
       </div>
       <div class="project">
         <h4 class="project-title">CG Modeling</h4>
@@ -256,86 +235,16 @@
       </div>
     </section>
 
-    <section class="section gallery-section">
-      <h3>Gallery</h3>
-      
-      <div class="gallery-category">
-        <h4>🎨 Illustration</h4>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <div class="gallery-item-image">🖼️</div>
-            <p class="gallery-item-title">Character Art</p>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-item-image">🎭</div>
-            <p class="gallery-item-title">Portrait</p>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-item-image">🌅</div>
-            <p class="gallery-item-title">Background</p>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-item-image">✨</div>
-            <p class="gallery-item-title">Effects</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-category">
-        <h4>🎯 CG Modeling</h4>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <div class="gallery-item-image">🤖</div>
-            <p class="gallery-item-title">Character Model</p>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-item-image">🏠</div>
-            <p class="gallery-item-title">Environment</p>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-item-image">⚙️</div>
-            <p class="gallery-item-title">Mechanical</p>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-item-image">🎨</div>
-            <p class="gallery-item-title">Texturing</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="gallery-category">
-        <h4>🎪 Character Design</h4>
-        <div class="gallery-grid">
-          <div class="gallery-item">
-            <div class="gallery-item-image">👤</div>
-            <p class="gallery-item-title">Original Character</p>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-item-image">🧙</div>
-            <p class="gallery-item-title">Fantasy Design</p>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-item-image">🎬</div>
-            <p class="gallery-item-title">Concept Art</p>
-          </div>
-          <div class="gallery-item">
-            <div class="gallery-item-image">🌟</div>
-            <p class="gallery-item-title">Variations</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="toc-section">
-        <h4>📑 Portfolio PDF 目次</h4>
-        <ul class="toc-list">
-          <li><strong>P1-3</strong>: イラスト作品集 - キャラクター表現</li>
-          <li><strong>P4-7</strong>: ポートレート・背景イラスト</li>
-          <li><strong>P8-11</strong>: CG モデリング - キャラクター</li>
-          <li><strong>P12-15</strong>: 環境・メカニカル・テクスチャリング</li>
-          <li><strong>P16-18</strong>: キャラクターデザイン - オリジナル</li>
-          <li><strong>P19-20</strong>: バリエーション・制作プロセス</li>
-        </ul>
-      </div>
+    <section class="section toc-section">
+      <h4>📑 Portfolio PDF 目次</h4>
+      <ul class="toc-list">
+        <li><strong>P1-3</strong>: イラスト作品集 - キャラクター表現</li>
+        <li><strong>P4-7</strong>: ポートレート・背景イラスト</li>
+        <li><strong>P8-11</strong>: CG モデリング - キャラクター</li>
+        <li><strong>P12-15</strong>: 環境・メカニカル・テクスチャリング</li>
+        <li><strong>P16-18</strong>: キャラクターデザイン - オリジナル</li>
+        <li><strong>P19-20</strong>: バリエーション・制作プロセス</li>
+      </ul>
     </section>
 
     <section class="section">
@@ -352,6 +261,16 @@
           <button class="pdf-btn" id="next-btn" onclick="nextPage()">次へ →</button>
         </div>
       </div>
+    </section>
+
+    <section class="section">
+      <h3>Contact</h3>
+      <ul class="link-list">
+        <li>Email: <a href="mailto:118150tanaka@gmail.com">118150tanaka@gmail.com</a></li>
+        <li>GitHub: <a href="https://github.com" target="_blank" rel="noopener noreferrer">https://github.com</a></li>
+        <li>X: <a href="https://x.com" target="_blank" rel="noopener noreferrer">https://x.com</a></li>
+        <li>LinkedIn: <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">https://www.linkedin.com</a></li>
+      </ul>
     </section>
   </div>
 
