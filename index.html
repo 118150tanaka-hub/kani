@@ -62,6 +62,39 @@
     li {
       margin-bottom: 8px;
     }
+    .skill-list {
+      list-style: none;
+      margin: 16px 0;
+      padding: 0;
+    }
+    .skill-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      background: #ffffff;
+      border: 1px solid #e6e8eb;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+    .skill-name {
+      font-weight: 600;
+      color: #222;
+    }
+    .skill-meter {
+      display: flex;
+      gap: 6px;
+    }
+    .skill-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #e6e6eb;
+    }
+    .skill-dot.active {
+      background: #0066cc;
+    }
     .section {
       margin-top: 32px;
     }
@@ -203,12 +236,12 @@
 
     <section class="section">
       <h3>Skills</h3>
-      <ul>
-        <li>Maya</li>
-        <li>Substance Painter</li>
-        <li>Photoshop</li>
-        <li>Clip Studio Paint</li>
-        <li>Procreate</li>
+      <ul class="skill-list">
+        <li class="skill-item"><span class="skill-name">Maya</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span></span></li>
+        <li class="skill-item"><span class="skill-name">Substance Painter</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></li>
+        <li class="skill-item"><span class="skill-name">Photoshop</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span></span></li>
+        <li class="skill-item"><span class="skill-name">Clip Studio Paint</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span></span></li>
+        <li class="skill-item"><span class="skill-name">Procreate</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></li>
       </ul>
     </section>
 
@@ -227,11 +260,19 @@
         <h4 class="project-title">CG Modeling</h4>
         <p>Mayaを使用したモデリング</p>
         <p class="project-stack">使用ツール: Maya, Substance Painter</p>
+        <div class="project-media">
+          <img class="project-img" src="images/cg-modeling-sample.jpg" alt="CG Modeling sample" />
+          <p class="project-media-note">ここにモデリング作品を表示できます。画像ファイルを <code>images/cg-modeling-sample.jpg</code> に追加してください。</p>
+        </div>
       </div>
       <div class="project">
         <h4 class="project-title">Character Design</h4>
         <p>オリジナルキャラクターのデザイン</p>
         <p class="project-stack">使用ツール: Procreate</p>
+        <div class="project-media">
+          <img class="project-img" src="images/character-design-sample.jpg" alt="Character Design sample" />
+          <p class="project-media-note">ここにキャラクターデザイン作品を表示できます。画像ファイルを <code>images/character-design-sample.jpg</code> に追加してください。</p>
+        </div>
       </div>
     </section>
 
