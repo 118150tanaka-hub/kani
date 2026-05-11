@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
+  <rect width="800" height="520" rx="40" ry="40" fill="#fff7de"/>
+  <path d="M170 180 C240 120 320 120 380 180" stroke="#f08ca3" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <path d="M210 340 C260 280 340 280 390 340" stroke="#d79f73" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <circle cx="520" cy="260" r="84" fill="#e3c1f0"/>
+  <text x="50%" y="92%" font-size="42" text-anchor="middle" fill="#7d4e4f" font-family="sans-serif">Illust 3</text>
+</svg>
