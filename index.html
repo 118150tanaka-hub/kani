@@ -10,18 +10,22 @@
       line-height: 1.6;
       margin: 0;
       padding: 0;
-      color: #1a1a1a;
-      background: #f8f9fb;
+      color: #4b3b33;
+      background: radial-gradient(circle at top left, #fff9e6 0%, #ffe5f1 55%, #eef6da 100%);
     }
     .container {
-      max-width: 780px;
+      max-width: 860px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 40px 24px;
+      background: rgba(255,255,255,0.92);
+      border-radius: 32px;
+      box-shadow: 0 24px 60px rgba(113, 77, 74, 0.12);
+      border: 1px solid rgba(190, 144, 119, 0.18);
     }
     .header-title {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
     }
     .brand-icon {
       width: 60px;
@@ -40,17 +44,19 @@
       margin: 0;
       font-size: clamp(2.8rem, 4vw, 4rem);
       letter-spacing: -0.04em;
+      color: #6f3c4e;
     }
     h2 {
       margin-top: 10px;
       font-size: 1.6rem;
-      color: #3b3b3b;
+      color: #7d5c4f;
     }
     h3 {
       margin-top: 40px;
       font-size: 1.2rem;
-      border-bottom: 2px solid #e0e0e0;
+      border-bottom: 2px solid #f4d0c1;
       padding-bottom: 8px;
+      color: #5b3e3a;
     }
     p {
       margin: 16px 0;
@@ -126,18 +132,20 @@
     }
     .project-stack {
       margin: 8px 0 0;
-      color: #555;
+      color: #6c4b3b;
     }
     .project-media {
-      margin-top: 16px;
+      margin-top: 18px;
     }
     .project-img {
       width: 100%;
       max-height: 420px;
       object-fit: cover;
-      border-radius: 14px;
-      border: 1px solid #e6e6eb;
+      border-radius: 20px;
+      border: 1px solid #f4c8d7;
       display: block;
+      box-shadow: 0 12px 28px rgba(184, 143, 121, 0.16);
+      background: #fff1f7;
     }
     .project-media-note {
       margin-top: 10px;
@@ -146,18 +154,18 @@
     }
     .pdf-viewer {
       margin-top: 40px;
-      padding: 24px;
-      background: #ffffff;
-      border: 1px solid #e6e8eb;
-      border-radius: 14px;
+      padding: 28px;
+      background: #fffdf7;
+      border: 1px solid rgba(205, 165, 135, 0.35);
+      border-radius: 22px;
     }
     .pdf-canvas-wrapper {
       margin: 20px 0;
       display: flex;
       justify-content: center;
-      background: #f5f5f5;
-      border-radius: 8px;
-      padding: 20px;
+      background: #fff5ee;
+      border-radius: 20px;
+      padding: 24px;
       min-height: 500px;
     }
     #pdf-canvas {
@@ -172,16 +180,18 @@
       flex-wrap: wrap;
     }
     .pdf-btn {
-      padding: 8px 16px;
-      background: #0066cc;
-      color: #ffffff;
+      padding: 10px 18px;
+      background: #f7b300;
+      color: #5b2b1f;
       border: none;
-      border-radius: 6px;
+      border-radius: 999px;
       cursor: pointer;
       font-size: 0.95rem;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(183, 104, 80, 0.18);
     }
     .pdf-btn:hover {
-      background: #0052a3;
+      background: #f3c05c;
     }
     .pdf-btn:disabled {
       background: #ccc;
@@ -196,9 +206,9 @@
     .toc-section {
       margin-top: 32px;
       padding: 20px;
-      background: #f8f9fb;
-      border-left: 4px solid #0066cc;
-      border-radius: 4px;
+      background: #fff4f6;
+      border-left: 4px solid #d98b78;
+      border-radius: 16px;
     }
     .toc-section h4 {
       margin: 0 0 12px;
@@ -234,16 +244,6 @@
       <p>イラスト・キャラクターデザイン・3DCGモデリングを手がけています。依頼に沿った制作からオリジナルキャラまで、見る人が楽しめる作品づくりを心がけています。</p>
     </section>
 
-    <section class="section">
-      <h3>Skills</h3>
-      <ul class="skill-list">
-        <li class="skill-item"><span class="skill-name">Maya</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span></span></li>
-        <li class="skill-item"><span class="skill-name">Substance Painter</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></li>
-        <li class="skill-item"><span class="skill-name">Photoshop</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span></span></li>
-        <li class="skill-item"><span class="skill-name">Clip Studio Paint</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span></span></li>
-        <li class="skill-item"><span class="skill-name">Procreate</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></li>
-      </ul>
-    </section>
 
     <section class="section">
       <h3>Projects</h3>
@@ -252,8 +252,8 @@
         <p>依頼された内容のイラスト作成</p>
         <p class="project-stack">使用ツール: Photoshop, Clip Studio Paint</p>
         <div class="project-media">
-          <img class="project-img" src="images/illustration-sample.jpg" alt="Illustration sample" />
-          <p class="project-media-note">ここに作品イメージを表示できます。画像ファイルを <code>images/illustration-sample.jpg</code> に追加してください。</p>
+          <img class="project-img" src="images/illustration-sample.svg" alt="Illustration sample" />
+          <p class="project-media-note">ここに作品イメージを表示できます。画像ファイルを <code>images/illustration-sample.svg</code> に置き換えてください。</p>
         </div>
       </div>
       <div class="project">
@@ -261,8 +261,8 @@
         <p>Mayaを使用したモデリング</p>
         <p class="project-stack">使用ツール: Maya, Substance Painter</p>
         <div class="project-media">
-          <img class="project-img" src="images/cg-modeling-sample.jpg" alt="CG Modeling sample" />
-          <p class="project-media-note">ここにモデリング作品を表示できます。画像ファイルを <code>images/cg-modeling-sample.jpg</code> に追加してください。</p>
+          <img class="project-img" src="images/cg-modeling-sample.svg" alt="CG Modeling sample" />
+          <p class="project-media-note">ここにモデリング作品を表示できます。画像ファイルを <code>images/cg-modeling-sample.svg</code> に置き換えてください。</p>
         </div>
       </div>
       <div class="project">
@@ -270,8 +270,8 @@
         <p>オリジナルキャラクターのデザイン</p>
         <p class="project-stack">使用ツール: Procreate</p>
         <div class="project-media">
-          <img class="project-img" src="images/character-design-sample.jpg" alt="Character Design sample" />
-          <p class="project-media-note">ここにキャラクターデザイン作品を表示できます。画像ファイルを <code>images/character-design-sample.jpg</code> に追加してください。</p>
+          <img class="project-img" src="images/character-design-sample.svg" alt="Character Design sample" />
+          <p class="project-media-note">ここにキャラクターデザイン作品を表示できます。画像ファイルを <code>images/character-design-sample.svg</code> に置き換えてください。</p>
         </div>
       </div>
     </section>
@@ -302,6 +302,17 @@
           <button class="pdf-btn" id="next-btn" onclick="nextPage()">次へ →</button>
         </div>
       </div>
+    </section>
+
+    <section class="section">
+      <h3>Skills</h3>
+      <ul class="skill-list">
+        <li class="skill-item"><span class="skill-name">Maya</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span></span></li>
+        <li class="skill-item"><span class="skill-name">Substance Painter</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></li>
+        <li class="skill-item"><span class="skill-name">Photoshop</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span></span></li>
+        <li class="skill-item"><span class="skill-name">Clip Studio Paint</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span></span></li>
+        <li class="skill-item"><span class="skill-name">Procreate</span><span class="skill-meter"><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot active"></span><span class="skill-dot"></span><span class="skill-dot"></span></span></li>
+      </ul>
     </section>
 
     <section class="section">
