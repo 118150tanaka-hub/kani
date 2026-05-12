@@ -1,81 +1,50 @@
-import React, { useEffect, useRef, useState } from 'react';
-import * as pdfjsLib from 'pdfjs-dist';
-
-// PDF.js workerを設定
-pdfjsLib.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.js`;
+import React, { useState } from 'react';
+import images from '../images';
 
 const PdfViewer = () => {
-  const canvasRef = useRef(null);
-  const [pdfDoc, setPdfDoc] = useState(null);
+  const slides = images.portfolioSlides;
   const [currentPage, setCurrentPage] = useState(1);
-  const [numPages, setNumPages] = useState(0);
-
-  useEffect(() => {
-    const loadPdf = async () => {
-      try {
-        const pdf = await pdfjsLib.getDocument('./portfolio.pdf').promise;
-        setPdfDoc(pdf);
-        setNumPages(pdf.numPages);
-        renderPage(pdf, 1);
-      } catch (error) {
-        console.error('PDFの読み込みエラー:', error);
-      }
-    };
-    loadPdf();
-  }, []);
-
-  const renderPage = async (pdf, pageNum) => {
-    if (!pdf) return;
-    const page = await pdf.getPage(pageNum);
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
-    const viewport = page.getViewport({ scale: 1.5 });
-
-    canvas.width = viewport.width;
-    canvas.height = viewport.height;
-
-    await page.render({
-      canvasContext: ctx,
-      viewport: viewport
-    }).promise;
-  };
+  const [fullscreen, setFullscreen] = useState(false);
+  const numPages = slides.length;
+  const currentSlide = slides[currentPage - 1];
 
   const nextPage = () => {
     if (currentPage < numPages) {
-      const newPage = currentPage + 1;
-      setCurrentPage(newPage);
-      renderPage(pdfDoc, newPage);
+      setCurrentPage(currentPage + 1);
     }
   };
 
   const previousPage = () => {
     if (currentPage > 1) {
-      const newPage = currentPage - 1;
-      setCurrentPage(newPage);
-      renderPage(pdfDoc, newPage);
+      setCurrentPage(currentPage - 1);
     }
   };
 
   return (
     <div className="container">
       <section className="section toc-section">
-        <h4>📑 Portfolio PDF 目次</h4>
+        <h4>📑 Portfolio Slide 目次</h4>
         <ul className="toc-list">
           <li><strong>P1-3</strong>: イラスト作品集 - キャラクター表現</li>
           <li><strong>P4-7</strong>: ポートレート・背景イラスト</li>
           <li><strong>P8-11</strong>: CG モデリング - キャラクター</li>
           <li><strong>P12-15</strong>: 環境・メカニカル・テクスチャリング</li>
           <li><strong>P16-18</strong>: キャラクターデザイン - オリジナル</li>
-          <li><strong>P19-20</strong>: バリエーション・制作プロセス</li>
+          <li><strong>P19-21</strong>: バリエーション・制作プロセス</li>
         </ul>
       </section>
 
       <section className="section">
-        <h3>Portfolio PDF</h3>
+        <h3>Portfolio Slideshow</h3>
         <div className="pdf-viewer">
-          <div className="pdf-canvas-wrapper">
-            <canvas ref={canvasRef}></canvas>
-            {!pdfDoc && <p style={{ color: '#999' }}>PDFファイルがまだアップロードされていません。portfolio.pdf をプロジェクトルートに配置してください。</p>}
+          <div className="pdf-canvas-wrapper" onClick={() => setFullscreen(true)}>
+            {currentSlide ? (
+              <img className="portfolio-slide-image" src={currentSlide} alt={`Portfolio page ${currentPage}`} loading="lazy" />
+            ) : (
+              <div className="portfolio-missing">
+                <p>ページ {currentPage} の画像がまだありません。img.portfolio フォルダに画像を追加してください。</p>
+              </div>
+            )}
           </div>
           <div className="pdf-controls">
             <button className="pdf-btn" onClick={previousPage} disabled={currentPage === 1}>← 前へ</button>
@@ -86,6 +55,18 @@ const PdfViewer = () => {
           </div>
         </div>
       </section>
+
+      {fullscreen && currentSlide && (
+        <div className="fullscreen-slide-overlay" onClick={() => setFullscreen(false)}>
+          <div className="fullscreen-slide-inner" onClick={(e) => e.stopPropagation()}>
+            <button className="fullscreen-close-btn" onClick={() => setFullscreen(false)}>×</button>
+            <button className="fullscreen-nav fullscreen-prev" onClick={previousPage} disabled={currentPage === 1}>←</button>
+            <img className="fullscreen-slide-image" src={currentSlide} alt={`Portfolio page ${currentPage}`} />
+            <button className="fullscreen-nav fullscreen-next" onClick={nextPage} disabled={currentPage === numPages}>→</button>
+            <div className="fullscreen-slide-counter">ページ {currentPage} / {numPages}</div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
