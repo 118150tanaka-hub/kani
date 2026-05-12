@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
-  <rect width="800" height="520" rx="40" ry="40" fill="#fff3dc"/>
-  <path d="M190 210 C240 170 330 170 380 210" stroke="#e48d9a" stroke-width="20" fill="none" stroke-linecap="round"/>
-  <circle cx="480" cy="220" r="75" fill="#d7e499"/>
-  <path d="M250 330 C300 270 360 280 410 330" stroke="#b1735f" stroke-width="18" fill="none" stroke-linecap="round"/>
-  <text x="50%" y="92%" font-size="42" text-anchor="middle" fill="#5f3f40" font-family="sans-serif">Char 2</text>
-</svg>

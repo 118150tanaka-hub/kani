@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
-  <rect width="800" height="520" rx="40" ry="40" fill="#fff3e7"/>
-  <circle cx="220" cy="220" r="110" fill="#f7c87c"/>
-  <circle cx="410" cy="160" r="80" fill="#f2a8cf"/>
-  <path d="M180 350 C210 310 300 300 340 350" stroke="#bf7d62" stroke-width="18" fill="none" stroke-linecap="round"/>
-  <text x="50%" y="92%" font-size="42" text-anchor="middle" fill="#7d4f45" font-family="sans-serif">Illust 1</text>
-</svg>

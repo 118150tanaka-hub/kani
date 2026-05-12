@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520">
-  <rect width="800" height="520" rx="40" ry="40" fill="#f6f2e9"/>
-  <path d="M170 320 C230 220 350 220 410 320" stroke="#d9a659" stroke-width="22" fill="none" stroke-linecap="round"/>
-  <rect x="320" y="170" width="160" height="160" rx="28" fill="#c7d8a1"/>
-  <circle cx="510" cy="310" r="60" fill="#f5c28a"/>
-  <text x="50%" y="92%" font-size="42" text-anchor="middle" fill="#6c4f3d" font-family="sans-serif">CG 1</text>
-</svg>

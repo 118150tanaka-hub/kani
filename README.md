@@ -1,43 +1,16 @@
-# kani
-ポートフォリオ
-/** サイトの文言・リンクはここだけ編集すれば OK */
-export const site = {
-  name: "みらのん",
-  role: "#3DCGデザイナー",
-  tagline: "わくわくするような作品をつくる",
-  about:
-    "イラスト・キャラクターデザイン・3DCGモデリングを手がけています。依頼に沿った制作からオリジナルキャラまで、見る人が楽しめる作品づくりを心がけています。",
-  email: "118150tanaka@gmail.com",
-  links: {
-    github: "https://github.com",
-    x: "https://x.com",
-    linkedin: "https://www.linkedin.com",
-  },
-  skills: [
-    "Maya",
-    "Substance Painter",
-    "Photoshop",
-    "Clip Studio Paint",
-    "Procreate",
-  ],
-  projects: [
-    {
-      title: "Illustration",
-      description: "依頼された内容のイラスト作成",
-      stack: ["Photoshop", "Clip Studio Paint"],
-      href: "#",
-    },
-    {
-      title: "CG modeling",
-      description: "Mayaを使用したモデリング",
-      stack: ["Maya", "Substance Painter"],
-      href: "#",
-    },
-    {
-      title: "Character design",
-      description: "オリジナルキャラクターのデザイン",
-      stack: ["Procreate"],
-      href: "#",
-    },
-  ],
-};
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+
+## React Compiler
+
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+
+## Expanding the ESLint configuration
+
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
